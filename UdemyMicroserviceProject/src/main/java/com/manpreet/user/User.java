@@ -4,22 +4,33 @@ import java.util.Date;
 
 public class User {
 
-	private long id;
+	private Long id;
 
 	private String name;
 
-	public User(long id, String name, Date birthDate) {
+	public User(long i, String name, Date birthDate) {
 		super();
-		this.id = id;
+		this.id = i;
 		this.name = name;
 		this.birthDate = birthDate;
 	}
 
-	public long getId() {
+	public User(long i, String name) {
+		super();
+		this.id = i;
+		this.name = name;
+
+	}
+	public User()
+	{
+		
+	}
+
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
