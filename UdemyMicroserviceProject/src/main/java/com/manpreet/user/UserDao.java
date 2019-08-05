@@ -38,9 +38,13 @@ public class UserDao {
 		List<User> userFound = users.stream().filter(it -> it.getId() == id).collect(Collectors.toList());
 		if (userFound != null && !userFound.isEmpty()) {
 			return userFound.get(0);
+<<<<<<< HEAD
+=======
 		} else {
 			return null;
+>>>>>>> 65d8c9829482e31156553516a373a989f4336a79
 		}
+		return null; 
 	}
 	
 	public String deleteById(long id)
