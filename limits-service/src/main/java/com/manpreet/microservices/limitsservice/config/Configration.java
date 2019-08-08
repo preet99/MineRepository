@@ -2,7 +2,7 @@ package com.manpreet.microservices.limitsservice.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
-@Component
+
 @ConfigurationProperties(value = "limits-service")
 public class Configration {
 

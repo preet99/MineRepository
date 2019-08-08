@@ -1,0 +1,1 @@
+insert into exchange_value (id, conversion_multiple , currency_from , port  , currency_to ) values(1,89,'EUR',0,'INR')
