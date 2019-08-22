@@ -26,7 +26,7 @@ private org.slf4j.Logger logger = LoggerFactory.getLogger(zuulLoggingFilter.clas
 
 	@Override
 	public String filterType() {
-		return null;
+		return "pre";
 	}
 
 	@Override
