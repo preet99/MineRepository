@@ -1,3 +1,10 @@
-<h3>Its app component</h3>
-<app-cokpit></app-cokpit>
-
+<div class="container">
+    <app-cokpit (serverCreated) = "onServerAdd($event)"
+    (bluePrintCreated) = "onAddBluePrint($event)"></app-cokpit>
+    <div class="row">
+      <div class="col-xs-12">
+        <app-server-element *ngFor="let lement of serverElements"
+         [element] = "lement"></app-server-element>
+      </div>
+    </div>
+  </div>
