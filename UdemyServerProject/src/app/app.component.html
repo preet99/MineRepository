@@ -1,10 +1,20 @@
 <div class="container">
-    <app-cokpit (serverCreated) = "onServerAdd($event)"
-    (bluePrintCreated) = "onAddBluePrint($event)"></app-cokpit>
+    <app-cokpit 
+    (bpcreated) = "onBluePrintAdd($event)"
+    (serverCreated) = "onServerAdd($event)"
+    ></app-cokpit>
     <div class="row">
       <div class="col-xs-12">
         <app-server-element *ngFor="let lement of serverElements"
-         [element] = "lement"></app-server-element>
+         [element] = "lement"
+         > <p>
+          <strong *ngIf="lement.type === 'server'" style="color: red">
+            {{lement.content}}
+          </strong>
+          <strong *ngIf="lement.type === 'bluePrint'" style="color: red">
+            {{lement.content}}
+          </strong>
+        </p></app-server-element>
       </div>
     </div>
   </div>

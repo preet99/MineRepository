@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
 
 })
 export class AppComponent {
+  selected: string;
   title = 'udemyfirstApp';
+  selectedFeature(type: string)
+  {
+    this.selected = type;
+  }
+
 }
