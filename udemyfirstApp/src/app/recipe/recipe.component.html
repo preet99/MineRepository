@@ -1,11 +1,11 @@
 <div class="row">
   <div class="col-md-5">
-    <app-recipe-list (selectedRecipe) = "recipeSelectedFunction($event)"></app-recipe-list>
+    <app-recipe-list></app-recipe-list>
   </div>
   <!-- <div class="com-md-2">
     <app-recipe-item></app-recipe-item>
   </div> -->
   <div class="col-md-5">
-    <app-recipe-detail [recipeInfo] = "selected" ></app-recipe-detail>
+    <app-recipe-detail [recipeInfo] = "checkSelected()" ></app-recipe-detail>
   </div>
 </div>

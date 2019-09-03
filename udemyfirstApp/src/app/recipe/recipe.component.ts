@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Recipe } from './recipe.model';
+import { RecipeService } from './recipe.service';
 
 
 
@@ -10,14 +11,18 @@ import { Recipe } from './recipe.model';
 })
 export class RecipeComponent implements OnInit {
   selected: Recipe;
-  recipeSelectedFunction(recipe: Recipe)
-  {
-     this.selected = recipe;
-     console.log(recipe)
+  
+  constructor(private recipeService: RecipeService) {
+   
   }
-  constructor() { }
 
+  checkSelected()
+  {
+    this.selected = this.recipeService.selected;
+    return this.selected
+  }
   ngOnInit() {
+    this.selected = this.recipeService.selected;
   }
 
 }
