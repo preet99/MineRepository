@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { RecipeService } from './recipe/recipe.service';
+import { ShoppingService } from './shopping-list/shopping.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  providers: [RecipeService]
-
+  providers: [RecipeService,ShoppingService]
 })
 export class AppComponent {
   selected: string;

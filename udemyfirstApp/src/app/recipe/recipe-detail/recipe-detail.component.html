@@ -14,21 +14,25 @@
       <button type="button" class="btn btn-primary dropdown-toggle">
         Manage Rceipe <span class="caret"></span>
       </button>
-      <ul class="dropdown-menu">
-        <li><a href="#">To Shopping List</a></li>
-        <li><a href="#">Edit Recipe</a></li>
-        <li><a href="#">Delete Recipe</a></li>
+      <ul >
+        <button  class = "dropdown-item" (click) = "toShoppingList()"><a href="#">To Shopping List</a></button>
+        <button class = "dropdown-item"><a href="#">Edit Recipe</a></button>
+        <button class = "dropdown-item"><a href="#">Delete Recipe</a></button>
       </ul>
     </div>
   </div>
 </div>
 <div class="row">
   <div class="col-xs-12">
-     <p>{{recipeInfo.description}}</p> 
+    <ul >
+    <li *ngFor ="let ingredient of recipeInfo.ingredients">
+        {{ingredient.name}}
+    </li>
+    </ul>
   </div>
 </div>
-<div class="row">
+<!-- <div class="row">
   <div class="col-xs-12">
     <p>{{recipeInfo.description}}</p> 
   </div>
-</div>
+</div> -->
