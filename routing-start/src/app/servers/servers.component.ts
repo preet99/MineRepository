@@ -9,10 +9,11 @@ import { ServersService } from './servers.service';
 export class ServersComponent implements OnInit {
   private servers: {id: number, name: string, status: string}[] = [];
 
-  constructor(private serversService: ServersService) { }
+  constructor(private serversService: ServersService) {  console.log(this.servers)}
 
   ngOnInit() {
     this.servers = this.serversService.getServers();
+   
   }
 
 }
