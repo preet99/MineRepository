@@ -1,8 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-
-
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { UsersComponent } from './users/users.component';
@@ -16,10 +14,12 @@ import { Route, RouterModule} from '@angular/router'
 
 const appRoutes: Route[] = [
   {path: 'users/:id/:name', component: UserComponent},
+  {path: 'users',component: UsersComponent},
   {path: '', component: HomeComponent},
-  {path: 'servers',component: ServersComponent},
-  {path: 'servers/:id/edit',component: EditServerComponent}
-
+  {path: 'servers',component: ServersComponent , children: [
+    {path: ':id', component: ServerComponent},
+    {path: ':id/edit',component: EditServerComponent}
+  ]}
 ];
 
 @NgModule({
