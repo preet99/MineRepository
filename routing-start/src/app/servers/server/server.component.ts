@@ -29,7 +29,7 @@ export class ServerComponent implements OnInit,OnDestroy {
   onEdit()
   {
     //var required = this.activatedRoute.snapshot.params['id'];
-    this.router.navigate(['edit'],{relativeTo: this.activatedRoute}) 
+    this.router.navigate(['edit'],{relativeTo: this.activatedRoute, queryParamsHandling: 'preserve'}) 
   }
   ngOnDestroy(){
   // this.subscription.unsubscribe();

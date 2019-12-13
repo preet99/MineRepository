@@ -6,17 +6,11 @@ import java.net.URI;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-<<<<<<< HEAD
 import org.springframework.hateoas.Link;
-import org.springframework.hateoas.Resource;
-import org.springframework.hateoas.mvc.ControllerLinkBuilder;
-
-=======
 import org.springframework.hateoas.Resource;
 import org.springframework.hateoas.mvc.ControllerLinkBuilder;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
->>>>>>> 65d8c9829482e31156553516a373a989f4336a79
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -30,31 +24,13 @@ public class UserResource {
 	@Autowired
 	private UserDao userDao;
 
-<<<<<<< HEAD
-	@GetMapping(path ="/users")
-	protected List<User> retrieveListOfUSers() {
-=======
+
 	@GetMapping(path = "/users")
 	private List<User> retrieveListOfUSers() {
->>>>>>> 65d8c9829482e31156553516a373a989f4336a79
 		return userDao.findAll();
 	}
 
 	@PostMapping("/users")
-<<<<<<< HEAD
-	public void saveUser( @RequestBody User user) {
-		userDao.saveUser(user);
-	}
-
-	@GetMapping("/users/{id}")
-	public Resource<User> retrieveById(@PathVariable long id) {
-		User user = userDao.getById(id);
-		Resource<User> resource = new Resource<User>(user);
-		Link userLink = ControllerLinkBuilder.linkTo(ControllerLinkBuilder.methodOn(this.getClass()).retrieveListOfUSers()).withRel("user-info");
-		resource.add(userLink);
-
-		return resource;
-=======
 	public ResponseEntity<User> saveUser(@RequestBody User user) {
 		if (user != null) {
 			userDao.saveUser(user);
@@ -89,7 +65,6 @@ public class UserResource {
 		if (userDao.deleteById(id) == null) {
 			throw new UserNotFoundException("User not found");
 		}
->>>>>>> 65d8c9829482e31156553516a373a989f4336a79
 	}
 
 	

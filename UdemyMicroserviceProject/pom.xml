@@ -28,23 +28,14 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-<<<<<<< .mine
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-hateoas</artifactId>
 		</dependency>
-
-
-=======
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-hateoas</artifactId>
 		</dependency>
-<<<<<<< HEAD
-=======
->>>>>>> .theirs
-
->>>>>>> 65d8c9829482e31156553516a373a989f4336a79
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
@@ -61,7 +52,6 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-<<<<<<< .mine
 		<dependency>
 			<groupId>com.fasterxml.jackson.dataformat</groupId>
 			<artifactId>jackson-dataformat-xml</artifactId>
@@ -85,15 +75,11 @@
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
 
-=======
 		<dependency>
-<<<<<<< HEAD
-=======
 			<groupId>com.fasterxml.jackson.dataformat</groupId>
 			<artifactId>jackson-dataformat-xml</artifactId>
 		</dependency>
 		<dependency>
->>>>>>> 65d8c9829482e31156553516a373a989f4336a79
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-swagger-ui</artifactId>
 			<version>2.9.2</version>
@@ -103,28 +89,6 @@
 			<artifactId>springfox-swagger2</artifactId>
 			<version>2.9.2</version>
 		</dependency>
-<<<<<<< HEAD
-
-
-
-
-
->>>>>>> .theirs
-	</dependencies>
-<<<<<<< .mine
-
-
-
-
-
-
-
-
-
-
-
-=======
-=======
 		<dependency>
 			<groupId>org.springframework.data</groupId>
 			<artifactId>spring-data-rest-hal-browser</artifactId>
@@ -133,9 +97,6 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
->>>>>>> 65d8c9829482e31156553516a373a989f4336a79
-
->>>>>>> .theirs
 	</dependencies>
 	<build>
 		<plugins>
