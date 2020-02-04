@@ -54,6 +54,7 @@ public class DeviceService {
     public void verifyDevice(User user, HttpServletRequest request) throws IOException, GeoIp2Exception {
 
         String ip = extractIp(request);
+        System.out.println("ïp+++++++++++++++++++++++"+ ip);
         String location = getIpLocation(ip);
 
         String deviceDetails = getDeviceDetails(request.getHeader("user-agent"));
@@ -79,10 +80,12 @@ public class DeviceService {
     private String extractIp(HttpServletRequest request) {
         String clientIp;
         String clientXForwardedForIp = request.getHeader("x-forwarded-for");
+        System.out.println("clientXForwardedForIp" + clientXForwardedForIp);
         if (nonNull(clientXForwardedForIp)) {
             clientIp = parseXForwardedHeader(clientXForwardedForIp);
         } else {
-            clientIp = request.getRemoteAddr();
+            clientIp = request.getLocalName();
+            System.out.println(request.getLocalName());
         }
 
         return clientIp;
