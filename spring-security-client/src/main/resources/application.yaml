@@ -16,7 +16,7 @@ security:
        accessTokenUri: http://localhost:8090/auth/oauth/token
        useraccessTokenUri: http://localhost:8090/auth/oauth/token
      resource:
-       userInfoUri: http//localhost:8090/auth/rest/hello
+       userInfoUri: http//localhost:8080/rest/hello
         
 spring:
     thymeleaf: 

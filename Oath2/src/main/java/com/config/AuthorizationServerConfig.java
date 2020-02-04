@@ -28,8 +28,8 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 	@Override
 	public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
 		logger.info("I am inside configure clients");
-		clients.inMemory().withClient("clientId").secret("mine").authorizedGrantTypes("authorization_code")
-				.scopes("user_info").autoApprove(true);
+		clients.inMemory().withClient("clientId").secret("mine").authorizedGrantTypes("password")
+				.scopes("scopeRead");
 	}
 
 	@Override
